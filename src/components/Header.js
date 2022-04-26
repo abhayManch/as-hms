@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -14,6 +13,9 @@ import {
   FiTwitter,
 } from "react-icons/fi";
 import { GoSettings } from "react-icons/go";
+import {
+  NavLink,
+} from "react-router-dom";
 
 const Header = () => {
   const Headers = styled.div`
@@ -89,49 +91,49 @@ const Header = () => {
             <Nav className="w-100">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link pl-0" to="/home">
+                  <NavLink className="nav-link pl-0" to="/home" activeClassName="active">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link active" to="/patients">
+                  <NavLink className="nav-link" to="/patients" activeClassName="active">
                     Patients
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/appointment">
+                  <NavLink className="nav-link" to="/appointment" activeClassName="active">
                     Appointment
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/schedule">
                     Schedule
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/overview">
                     Overview
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/insurance">
                     Insurance
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/billing">
                     Billing
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/reporting">
                     Reporting
-                  </Link>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/setup">
                     Setup
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </Nav>
