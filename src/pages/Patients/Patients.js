@@ -46,6 +46,16 @@ function Patients() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  async function getPatients(credentials) {
+    return fetch('http://localhost:4200/login', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(data => data.json())
+   }
+   getPatients();
   return (
     <div>
       <PateintLayout>
@@ -312,7 +322,7 @@ function Patients() {
               </Col>
               <Col md={6}>
                 <Form.Group>
-                  <Form.Label>Phone *</Form.Label>
+                  <Form.Label>Phone*</Form.Label>
                   <div className="formicon">
                     <Form.Control type="text" placeholder="Eg. 9876543210" />
                     <FiPhoneCall />
