@@ -38,7 +38,7 @@ const login = () => {
     },
   }));
 
-  async function loginUser(credentials) {
+  async function loginUser(credentials) { 
     return fetch('http://localhost:4200/login', {
       method: 'POST',
       headers: {
