@@ -39,7 +39,7 @@ const login = () => {
   }));
 
   async function loginUser(credentials) { 
-    return fetch('http://localhost:4200/login', {
+    return fetch('http://localhost:4200/login', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
